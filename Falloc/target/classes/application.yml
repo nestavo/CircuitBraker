@@ -1,0 +1,11 @@
+server:
+  port: 8089  
+
+resilience4j.circuitbreaker:
+  instances:
+    failingService:
+      registerHealthIndicator: true
+      slidingWindowSize: 5
+      failureRateThreshold: 50
+      waitDurationInOpenState: 5000
+
